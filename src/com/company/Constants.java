@@ -2,7 +2,7 @@ package com.company;
 
 public class Constants {
 
-    public static final int N = 4;
+    public static final int N = 5;
 
     public static final int HEARTS = 0;
     public static final int DIAMONDS = 1;

@@ -247,12 +247,6 @@ public class Solve {
 
         for (int i = 0; i< childBoards.size(); i++){
             TreeNode childNode = new TreeNode(childBoards.get(i), 0, currentNode.d+1, 0, trackers.get(i), currentNode);
-            /*childNode.board = childBoards.get(i);
-            childNode.parent = currentNode;
-            childNode.d = currentNode.d + 1;
-            childNode.f = 0;
-            childNode.h = 0;
-            childNode.tracker = trackers.get(i);*/
 
             /*System.out.println("CHILDREN ARE === " + i);
             System.out.println("MOVE is === " + trackers.get(i).move);
@@ -299,7 +293,7 @@ public class Solve {
         int index = 0;
 
         for (TreeNode node: queue){
-            if (node.h < heuristicValue){
+            if (node.f < heuristicValue){
                 break;
             }
             index++;

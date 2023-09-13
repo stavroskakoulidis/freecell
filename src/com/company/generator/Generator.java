@@ -17,25 +17,24 @@ public class Generator {
     public static final int CLUBS = 3;
 
     public static void main(String[] args) {
-        int id1, id2, N;
+        int id, N;
 
 
-        if (args.length != 4) {
+        if (args.length != 3) {
             System.out.println("Wrong number of arguments. Use correct syntax:");
             syntaxMessage();
             return;
         }else{
-            id1 = Integer.parseInt(args[1]);
-            id2 = Integer.parseInt(args[2]);
-            N = Integer.parseInt(args[3]);
+            id = Integer.parseInt(args[1]);
+            N = Integer.parseInt(args[2]);
         }
 
-        if (id1 <= 0 || id2 <= 0 || id1 > id2) {
+        if (id <= 0 ) {
             syntaxMessage();
             return;
         }
 
-        for (int i = id1; i <= id2; i++) {
+        for (int i = 1; i <= id; i++) {
             initializeDeck(N);
             shuffleDeck(400 * N, N);
             writeToFile(i, args[0], N);
@@ -130,16 +129,15 @@ public class Generator {
 
     private static void syntaxMessage() {
         System.out.println("Use syntax:\n");
-        System.out.println("\tjava Generator <prefix> <id1> <id2> <n>\n");
+        System.out.println("\tjava Generator <prefix> <id> <n>\n");
         System.out.println("where:\n ");
         System.out.println("\t<prefix> = the prefix of the filename of the instances to be generated");
-        System.out.println("\t<id1> = a number indicating the suffix of the first instance.");
-        System.out.println("\t<id2> = a number indicating the suffix of the last instance.");
+        System.out.println("\t<id> = a number indicating the number of boards to be generated.");
         System.out.println("\t<n> = a number indicating the max value of a card.\n");
         System.out.println("e.g. the call \n");
-        System.out.println("\tjava Generator test 1 10 3\n");
-        System.out.println("generates 10 instances with names ranging from test1.txt to test10.txt and max card value equals to 2 (n-1).");
-        System.out.println("Constraints: id1>0, id2>0, id1<=id2.");
+        System.out.println("\tjava Generator test 4 3\n");
+        System.out.println("generates 4 instances with names ranging from test1.txt to test4.txt and max card value equals to 2 (n-1).");
+        System.out.println("\tId must be > 0\n");
 
     }
 

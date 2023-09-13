@@ -1,20 +1,29 @@
-Solution Length is 19.
-Foundation S0.
-Foundation S1.
+Solution Length is 28.
+Stack S3 D4.
 Foundation D0.
-Foundation H0.
-Foundation H1.
-Foundation H2.
-Foundation H3.
-Stack C2 D3.
-Stack D2 S3.
 Foundation D1.
 Foundation D2.
-Stack C3.
+Stack H1 C2.
+Stack C4.
 Foundation C0.
 Foundation C1.
+Foundation S0.
+Stack C3.
+Stack H3 C4.
+Foundation H0.
+Stack S2 H3.
+Foundation H1.
 Foundation C2.
 Foundation C3.
 Foundation D3.
+Stack S3.
+Foundation D4.
+Foundation H2.
+Stack H4.
+Foundation S1.
 Foundation S2.
 Foundation S3.
+Foundation S4.
+Foundation H3.
+Foundation C4.
+Foundation H4.
